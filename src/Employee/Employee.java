@@ -1,6 +1,7 @@
 package Employee;
 
 import java.util.Random;
+
 import static java.lang.Math.round;
 
 public class Employee {
@@ -83,7 +84,7 @@ class Manager extends Employee {
 
 
     double zpCalc() {
-        return round (salary * rate);
+        return round(salary * rate);
     }
 }
 
