@@ -20,9 +20,7 @@ public class Employee {
     public Employee() {
     }
 
-    double zpCalc() {
-        System.out.println(this.salary + " считаем зп менеджера " + this.rate + " все еще считаем зп ");
-
+    double wagesCalculation() {
         return salary * rate;
     }
 
@@ -30,9 +28,7 @@ public class Employee {
     public String toString() {
         return ("Data Employee --> " + " Id:" + id + ", Name:" + name + ", Salary:" + salary + ", Rate: " + rate);
     }
-
 }
-
 
 class Developer extends Employee {
     private int id;
@@ -49,7 +45,7 @@ class Developer extends Employee {
         this.codeLines = codeLines;
     }
 
-    double zpCalc() {
+    double wagesCalculation() {
         Random rand = new Random();
         int randomInt = 100 + rand.nextInt(901);
         return round(this.salary * this.rate * this.codeLines / randomInt);
@@ -83,24 +79,21 @@ class Manager extends Employee {
     }
 
 
-    double zpCalc() {
+    double wagesCalculation() {
         return round(salary * rate);
     }
 }
-
 
 class Test {
     public static void main(String[] args) {
 
         Developer john = new Developer(32, "john", 1000, 8.8, 500);
         System.out.println(john.toString());
-        System.out.println("Money Developer calc, wages --> " + john.zpCalc());
+        System.out.println("Money Developer calculation, wages --> " + john.wagesCalculation());
 
         Manager bob = new Manager(11, "bob", 500, 4.4, 5);
         System.out.println(bob.toString());
-        System.out.println("Money Manager calc, wages --> " + bob.zpCalc());
-
-
+        System.out.println("Money Manager calculation, wages --> " + bob.wagesCalculation());
     }
 }
 
