@@ -14,10 +14,12 @@ public class Employee {
     }
 
     double getSalary () {
-        return  salary;
+        double retDouble = salary;
+        return  retDouble;
     }
     double getRate () {
-        return rate;
+        double retDouble = rate;
+        return  retDouble;
     }
 
     double wagesCalculation() {

@@ -12,7 +12,8 @@ class Developer extends Employee {
     }
 
     int getCodelines (){
-        return codeLines;
+        int retInt = codeLines;
+        return retInt;
     }
 
     public double wagesCalculation1() {
