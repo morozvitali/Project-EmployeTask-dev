@@ -13,7 +13,11 @@ public class Employee {
         this.rate = rate;
     }
 
-    public Employee() {
+    double getSalary () {
+        return  salary;
+    }
+    double getRate () {
+        return rate;
     }
 
     double wagesCalculation() {
